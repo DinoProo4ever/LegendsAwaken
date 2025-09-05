@@ -1,0 +1,28 @@
+{
+  "name": "Creating a Park",
+  "category": "legendsawaken:jurassic_guide",
+  "icon": "legendsawaken:low_security_fence",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Infrastructure",
+      "text": "Design safe enclosures, pathways, and observation stations. The visitor experience is key to success."
+    },
+    {
+      "type": "text",
+      "title": "Species Diversity",
+      "text": "Strategically mix herbivorous and carnivorous species to maintain balance and attractiveness."
+    },
+    {
+      "type": "text",
+      "title": "Security Protocols",
+      "text": "Larger or more aggressive creatures require electric fences and containment protocols."
+    },
+    {
+      "type": "text",
+      "title": "Personnel Management",
+      "text": "Assign tasks to scientists, guards, and caretakers to keep your park operational and safe."
+    }
+  ]
+}

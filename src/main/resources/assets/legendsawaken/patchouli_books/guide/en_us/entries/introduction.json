@@ -1,0 +1,54 @@
+{
+  "name": "Introduction",
+  "category": "legendsawaken:getting_started",
+  "icon": "minecraft:writable_book",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Void",
+      "text": "$(italic)$(7)When worlds collapsed...$(br)Legends awakened.$(br2)$(8)A fracture. A tear in the fabric of space.$(br)A collision of forgotten realms."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "",
+      "images": [
+        "legendsawaken:textures/book/intro/portals_01.png",
+        "legendsawaken:textures/book/intro/portals_02.png"
+      ],
+      "text": "$(7)$(italic)Fossils. Symbols. Shadows.$(br)A storm of lost memories..."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Fall",
+      "text": "$(8)Five worlds were torn apart.$(br)Their memories scattered.$(br)Their creatures set free."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "",
+      "images": [
+        "legendsawaken:textures/book/intro/fractured_world.png"
+      ],
+      "text": "$(7)$(italic)Jungles clash with ruins.$(br)Deserts shimmer with magic.$(br)A world stitched by chaos."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Awakening",
+      "text": "$(8)You are not from here.$(br2)But you were summoned by the Nexus.$(br)To restore... or rewrite... what remains of the legends."
+    },
+    {
+      "type": "patchouli:image",
+      "title": "",
+      "images": [
+        "legendsawaken:textures/book/intro/awakening_01.png",
+        "legendsawaken:textures/book/intro/awakening_02.png"
+      ],
+      "text": "$(7)$(italic)Echoes of the past.$(br)Ruin and power waiting to rise."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Mission",
+      "text": "$(8)There is no prophecy.$(br)No guidance.$(br2)Only choice.$(br2)You decide what must be reborn...$(br)and what must be forgotten."
+    }
+  ]
+}

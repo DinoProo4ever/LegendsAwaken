@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"half=lower": { "model": "legendsawaken:block/cultivator_lower"},
+		"half=upper": { "model": "legendsawaken:block/cultivator_upper"}
+	}
+}

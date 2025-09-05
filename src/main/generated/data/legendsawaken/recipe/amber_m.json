@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "legendsawaken:amber_block_m"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "legendsawaken:amber_m"
+  }
+}

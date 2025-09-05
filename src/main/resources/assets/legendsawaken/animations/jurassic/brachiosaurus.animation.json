@@ -1,0 +1,14 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.brachiosaurus.idle": {
+			"loop": true
+		},
+		"animation.brachiosaurus.walk": {
+			"loop": true
+		},
+		"animation.brachiosaurus.attack": {
+			"loop": true
+		}
+	}
+}

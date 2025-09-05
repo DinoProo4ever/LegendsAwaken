@@ -1,0 +1,10 @@
+{
+  "jurassic_park_theme": {
+    "sounds": [
+      {
+        "name": "legendsawaken:jurassic_park_theme",
+        "stream": true
+      }
+    ]
+  }
+}

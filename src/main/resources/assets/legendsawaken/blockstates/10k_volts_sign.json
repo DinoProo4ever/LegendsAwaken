@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "legendsawaken:block/10k_volts_sign" },
+		"facing=south": { "model": "legendsawaken:block/10k_volts_sign", "y": 180 },
+		"facing=west":  { "model": "legendsawaken:block/10k_volts_sign", "y": 270 },
+		"facing=east":  { "model": "legendsawaken:block/10k_volts_sign", "y": 90 }
+	}
+}

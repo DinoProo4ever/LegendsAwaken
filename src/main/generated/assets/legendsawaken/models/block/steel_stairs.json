@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "legendsawaken:block/steel_block",
+    "side": "legendsawaken:block/steel_block",
+    "top": "legendsawaken:block/steel_block"
+  }
+}

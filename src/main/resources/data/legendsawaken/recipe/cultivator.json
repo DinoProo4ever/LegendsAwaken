@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "multi_bench",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#O#",
+    "SES"
+  ],
+  "key": {
+    "#": {
+      "item": "legendsawaken:reinforced_glass"
+    },
+    "O": {
+      "item": "legendsawaken:syntetic_egg"
+    },
+    "S": {
+      "item": "legendsawaken:steel_ingot"
+    },
+    "E": {
+      "item": "legendsawaken:electronics"
+    }
+  },
+  "result": {
+    "id": "legendsawaken:cultivator"
+  }
+}

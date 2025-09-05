@@ -1,0 +1,125 @@
+{
+  "multipart": [
+    {
+      "when": { "has_post": false, "has_support": false, "north": false, "east": false, "south": false, "west": false },
+      "apply": { "model": "legendsawaken:block/low_security_fence_post" }
+    },
+    {
+      "when": { "has_post": false, "has_support": true, "north": false, "east": false, "south": false, "west": false },
+      "apply": { "model": "legendsawaken:block/low_security_fence_post" }
+    },
+    {
+      "when": { "has_post": false, "has_support": true, "north": false, "east": false, "south": false, "west": false },
+      "apply": { "model": "legendsawaken:block/low_security_fence_base" }
+    },
+    {
+      "when": { "has_post": true },
+      "apply": { "model": "legendsawaken:block/low_security_fence_post" }
+    },
+    {
+      "when": { "has_post": true, "has_support": true },
+      "apply": { "model": "legendsawaken:block/low_security_fence_base" }
+    },
+    {
+      "when": { "north": true },
+      "apply": { "model": "legendsawaken:block/low_security_fence_side", "uvlock": true }
+    },
+    {
+      "when": { "east": true },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_side",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": { "south": true },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_side",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": { "west": true },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_side",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+
+    { "when": { "has_support": true, "north": true },
+      "apply": { "model": "legendsawaken:block/low_security_fence_base_side", "uvlock": true }
+    },
+    { "when": { "has_support": true, "east": true },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_base_side",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    { "when": { "has_support": true, "south": true },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_base_side",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    { "when": { "has_support": true, "west": true },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_base_side",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    { "when": { "has_post": false, "has_sign": true, "sign_facing": "north" },
+      "apply": { "model": "legendsawaken:block/low_security_fence_sign", "uvlock": true }
+    },
+    { "when": { "has_post": false, "has_sign": true, "sign_facing": "east" },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_sign",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    { "when": { "has_post": false, "has_sign": true, "sign_facing": "south" },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_sign",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    { "when": { "has_post": false, "has_sign": true, "sign_facing": "west" },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_sign",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    { "when": { "has_post": true, "has_sign": true, "sign_facing": "north" },
+      "apply": { "model": "legendsawaken:block/low_security_fence_post_sign", "uvlock": true }
+    },
+    { "when": { "has_post": true, "has_sign": true, "sign_facing": "east" },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_post_sign",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    { "when": { "has_post": true, "has_sign": true, "sign_facing": "south" },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_post_sign",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    { "when": { "has_post": true, "has_sign": true, "sign_facing": "west" },
+      "apply": {
+        "model": "legendsawaken:block/low_security_fence_post_sign",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

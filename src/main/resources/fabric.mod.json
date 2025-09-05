@@ -1,0 +1,56 @@
+{
+	"schemaVersion": 1,
+	"id": "legendsawaken",
+	"version": "0.3.0}",
+	"name": "Legends Awaken",
+	"description": "An ambitious and exciting project! Combining content from Jurassic Park, How to Train Your Dragon, Ninjago, TenSura, The Lion King, and some ARK mechanics.",
+	"authors": [
+		"DinoProo4ever"
+	],
+	"contact": {
+		"wiki": "https://legendsawaken.fandom.com/wiki/Legends_Awaken_Wiki"
+	},
+	"license": "MIT",
+	"icon": "assets/legendsawaken/icon.png",
+	"environment": "*",
+	"custom": {
+		"cardinal-components": [
+			"legendsawaken:player_stats"
+		]
+	},
+	"entrypoints": {
+		"main": [
+			"com.dinoproo.legendsawaken.LegendsAwaken"
+		],
+		"fabric-datagen": [
+			"com.dinoproo.legendsawaken.LegendsAwakenDataGenerator"
+		],
+		"command": [
+			"com.dinoproo.legendsawaken.LegendsAwaken"
+		],
+		"client": [
+			"com.dinoproo.legendsawaken.LegendsAwakenClient"
+		],
+		"rei_client": [
+			"com.dinoproo.legendsawaken.compat.LegendsAwakenREIClient"
+		],
+		"modmenu": [
+			"com.dinoproo.legendsawaken.config.ModMenuIntegration"
+		],
+		"cardinal-components": [
+			"com.dinoproo.legendsawaken.component.ModComponents"
+		]
+	},
+	"mixins": [
+		"legendsawaken.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

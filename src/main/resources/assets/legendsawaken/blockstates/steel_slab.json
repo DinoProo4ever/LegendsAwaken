@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "legendsawaken:block/steel_slab"
+    },
+    "type=double": {
+      "model": "legendsawaken:block/steel_slab_double"
+    },
+    "type=top": {
+      "model": "legendsawaken:block/steel_slab_top"
+    }
+  }
+}

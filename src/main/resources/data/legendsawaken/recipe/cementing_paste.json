@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "multi_bench",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "legendsawaken:keratin"
+    },
+    {
+      "tag": "legendsawaken:keratin"
+    },
+    {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  ],
+  "result": {
+    "id": "legendsawaken:cementing_paste"
+  }
+}

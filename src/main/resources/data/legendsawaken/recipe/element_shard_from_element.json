@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "multi_bench",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendsawaken:element"
+    }
+  ],
+  "result": {
+    "id": "legendsawaken:element_shard",
+    "count": 9
+  }
+}

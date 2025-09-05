@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "multi_bench",
+  "category": "misc",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "legendsawaken:steel_ingot"
+    }
+  },
+  "result": {
+    "id": "legendsawaken:steel_stairs",
+    "count": 1
+  }
+}

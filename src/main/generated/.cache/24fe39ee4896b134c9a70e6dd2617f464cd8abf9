@@ -1,0 +1,7 @@
+// 1.21.1	2025-07-08T13:57:56.7850758	Legends Awaken/Tags for minecraft:block
+734a506961c6b60c8725547fc4e21aff800ee613 data\minecraft\tags\block\fences.json
+c644f09638df287b154cfe82d6eef05eee7338c6 data\minecraft\tags\block\needs_iron_tool.json
+65eeaa44fbbb6738f13429d03d065f66069dc250 data\minecraft\tags\block\walls.json
+29f122d64effa89c295a8ea3755417b856bcd10f data\minecraft\tags\block\needs_stone_tool.json
+ba9ee1a3f45cfaffecc2ba648818d65b9722b0a5 data\minecraft\tags\block\mineable\pickaxe.json
+19bd16955f7ad4d9585ebc70699cda66a026933d data\minecraft\tags\block\needs_diamond_tool.json

@@ -1,0 +1,21 @@
+{
+  "name": "Brachiosaurus",
+  "category": "legendsawaken:dinosaur_field_guide",
+  "icon": "legendsawaken:brachiosaurus_spawn_egg",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Brachiosaurus",
+      "text": "Scientific name: Brachiosaurus brancai (Giraffatitan)$(br2)Period: Late Jurassic$(br2)Diet: Herbivore$(br2)Behaviour: Sociable, Neutral$(br2)Preferred Biome: Forests"
+    },
+    {
+      "type": "entity",
+      "entity": "legendsawaken:brachiosaurus{Variant:0}",
+      "scale": 0.25,
+      "offset": 3,
+      "rotate": false,
+      "default_rotation": -45,
+      "text": "Brachiosaurus has the ability to rear up in order to reach vegetation that is too tall for them to access at ground level."
+    }
+  ]
+}

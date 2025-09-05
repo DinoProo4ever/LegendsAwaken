@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "multi_bench",
+  "category": "misc",
+  "pattern": [
+    "EEE",
+    "Q D",
+    " S "
+  ],
+  "key": {
+    "E": {
+      "item": "legendsawaken:electronics"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "legendsawaken:steel_ingot"
+    }
+  },
+  "result": {
+    "id": "legendsawaken:holo_emitter"
+  }
+}

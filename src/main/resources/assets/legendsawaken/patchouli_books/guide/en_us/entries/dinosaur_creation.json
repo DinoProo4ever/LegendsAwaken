@@ -1,0 +1,28 @@
+{
+  "name": "Dinosaur Creation",
+  "category": "legendsawaken:jurassic_guide",
+  "icon": "legendsawaken:dna",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "legendsawaken:dna_extractor",
+      "text": "Dinosaur DNA is obtained by processing amber in the DNA Extractor. Quality and species may vary."
+    },
+    {
+      "type": "spotlight",
+      "item": "legendsawaken:dna_enhancer",
+      "text": "DNA can be refined using the DNA Enhancer. Mixing compatible fragments can improve genetic quality."
+    },
+    {
+      "type": "spotlight",
+      "item": "legendsawaken:cultivator",
+      "text": "Use a Cultivator to transform refined DNA and a Syntetic Egg into a Viable Dinosaur Egg."
+    },
+    {
+      "type": "spotlight",
+      "item": "legendsawaken:dna_hybridizer",
+      "text": "To begin hybridizing, you will need two DNA samples, the system combine them into a viable genome if compatible."
+    }
+  ]
+}

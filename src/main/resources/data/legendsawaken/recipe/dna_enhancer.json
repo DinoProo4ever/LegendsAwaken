@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "multi_bench",
+  "category": "misc",
+  "pattern": [
+    "SAS",
+    "GHG",
+    "#E#"
+  ],
+  "key": {
+    "#": {
+      "tag": "legendsawaken:polymer"
+    },
+    "A": {
+      "tag": "legendsawaken:amber"
+    },
+    "H": {
+      "item": "legendsawaken:holo_emitter"
+    },
+    "E": {
+      "item": "legendsawaken:electronics"
+    },
+    "S": {
+      "item": "legendsawaken:steel_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "result": {
+    "id": "legendsawaken:dna_enhancer"
+  }
+}

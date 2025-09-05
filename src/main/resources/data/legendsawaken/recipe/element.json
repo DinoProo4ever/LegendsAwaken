@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "multi_bench",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendsawaken:element_shard"
+    },
+    {
+      "item": "legendsawaken:element_shard"
+    },
+    {
+      "item": "legendsawaken:element_shard"
+    },
+    {
+      "item": "legendsawaken:element_shard"
+    },
+    {
+      "item": "legendsawaken:element_shard"
+    },
+    {
+      "item": "legendsawaken:element_shard"
+    },
+    {
+      "item": "legendsawaken:element_shard"
+    },
+    {
+      "item": "legendsawaken:element_shard"
+    },
+    {
+      "item": "legendsawaken:element_shard"
+    }
+  ],
+  "result": {
+    "id": "legendsawaken:element"
+  }
+}

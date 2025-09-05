@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:empty",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "legendsawaken:amber_xs",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "legendsawaken:amber_s",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "legendsawaken:amber_m",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

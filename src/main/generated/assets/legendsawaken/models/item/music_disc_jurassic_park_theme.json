@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "legendsawaken:item/music_disc_jurassic_park_theme"
+  }
+}

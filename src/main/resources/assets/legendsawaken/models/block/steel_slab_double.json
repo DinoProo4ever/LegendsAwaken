@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "legendsawaken:block/steel_block",
+    "side": "legendsawaken:block/steel_slab_side"
+  }
+}

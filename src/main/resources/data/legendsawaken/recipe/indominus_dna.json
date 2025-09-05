@@ -1,0 +1,16 @@
+{
+  "type": "legendsawaken:hybridizing",
+  "category": "misc",
+  "dna_a": {
+    "item": "legendsawaken:dna"
+  },
+  "species_a": "legendsawaken:tyrannosaurus",
+  "dna_b": {
+    "item": "legendsawaken:dna"
+  },
+  "species_b": "legendsawaken:velociraptor",
+  "result": {
+    "id": "legendsawaken:hybrid_dna"
+  },
+  "result_species": "legendsawaken:indominus"
+}

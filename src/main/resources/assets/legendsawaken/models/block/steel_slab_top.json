@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "legendsawaken:block/steel_block",
+    "side": "legendsawaken:block/steel_slab_side",
+    "top": "legendsawaken:block/steel_block"
+  }
+}

@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "legendsawaken:block/dna_hybridizer" },
+		"facing=south": { "model": "legendsawaken:block/dna_hybridizer", "y": 180 },
+		"facing=west":  { "model": "legendsawaken:block/dna_hybridizer", "y": 270 },
+		"facing=east":  { "model": "legendsawaken:block/dna_hybridizer", "y": 90 }
+	}
+}

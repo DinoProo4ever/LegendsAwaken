@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "multi_bench",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendsawaken:cementing_paste"
+    },
+    {
+      "item": "legendsawaken:cementing_paste"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    }
+  ],
+  "result": {
+    "id": "legendsawaken:polymer"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.legendsawaken.music_disc_jurassic_park_theme.desc"
+  },
+  "length_in_seconds": 204.237,
+  "sound_event": "legendsawaken:jurassic_park_theme"
+}

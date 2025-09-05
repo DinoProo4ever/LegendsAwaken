@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "multi_bench",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#P#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glass"
+    },
+    "P": {
+      "tag": "legendsawaken:polymer"
+    }
+  },
+  "result": {
+    "id": "legendsawaken:reinforced_glass",
+    "count": 8
+  }
+}

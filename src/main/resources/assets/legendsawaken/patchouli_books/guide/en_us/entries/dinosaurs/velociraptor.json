@@ -1,0 +1,20 @@
+{
+  "name": "Velociraptor",
+  "category": "legendsawaken:dinosaur_field_guide",
+  "icon": "legendsawaken:velociraptor_spawn_egg",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Velociraptor",
+      "text": "Scientific name: Velociraptor antirrhopus (Deinonychus)$(br2)Period: Late Cretaceous$(br2)Diet: Carnívore$(br2)Behaviour: Sociable, Aggressive$(br2)Preferred Biome: Deserts and Plains"
+    },
+    {
+      "type": "entity",
+      "entity": "legendsawaken:velociraptor{Variant:0}",
+      "scale": 1,
+      "rotate": false,
+      "default_rotation": -45,
+      "text": "Velociraptors are often seen in packs. They are highly intelligent, capable of setting traps and communicating with others."
+    }
+  ]
+}

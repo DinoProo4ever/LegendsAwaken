@@ -1,0 +1,10 @@
+{
+  "type": "legendsawaken:extracting",
+  "category": "misc",
+  "ingredient": {
+    "tag": "legendsawaken:amber"
+  },
+    "result": {
+    "id": "legendsawaken:dna"
+  }
+}

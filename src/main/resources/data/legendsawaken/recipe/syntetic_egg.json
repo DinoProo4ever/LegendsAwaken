@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "multi_bench",
+  "category": "misc",
+  "pattern": [
+    " # ",
+    "#O#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "legendsawaken:organic_polymer"
+    },
+    "O": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "id": "legendsawaken:syntetic_egg"
+  }
+}

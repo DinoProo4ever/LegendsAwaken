@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "multi_bench",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendsawaken:silica_pearls"
+    },
+    {
+      "item": "legendsawaken:silica_pearls"
+    },
+    {
+      "item": "legendsawaken:silica_pearls"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "id": "legendsawaken:electronics"
+  }
+}

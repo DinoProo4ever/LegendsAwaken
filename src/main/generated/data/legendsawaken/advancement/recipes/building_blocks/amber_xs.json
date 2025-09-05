@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_amber_block_xs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "legendsawaken:amber_block_xs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:amber_xs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_amber_block_xs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:amber_xs"
+    ]
+  }
+}

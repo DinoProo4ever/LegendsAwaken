@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "legendsawaken:block/dna_enhancer" },
+		"facing=south": { "model": "legendsawaken:block/dna_enhancer", "y": 180 },
+		"facing=west":  { "model": "legendsawaken:block/dna_enhancer", "y": 270 },
+		"facing=east":  { "model": "legendsawaken:block/dna_enhancer", "y": 90 }
+	}
+}
