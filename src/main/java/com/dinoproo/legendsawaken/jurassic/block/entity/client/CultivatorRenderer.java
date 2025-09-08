@@ -6,7 +6,6 @@ import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
@@ -19,10 +18,6 @@ import net.minecraft.world.World;
 import java.util.Objects;
 
 public class CultivatorRenderer implements BlockEntityRenderer<CultivatorBlockEntity> {
-    public CultivatorRenderer(BlockEntityRendererFactory.Context context) {
-
-    }
-
     @Override
     public void render(CultivatorBlockEntity entity, float tickDelta, MatrixStack matrices,
                        VertexConsumerProvider vertexConsumers, int light, int overlay) {

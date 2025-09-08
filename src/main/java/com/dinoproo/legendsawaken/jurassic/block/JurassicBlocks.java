@@ -15,11 +15,11 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class JurassicBlocks {
     //Amber
-    public static final Block AMBER_BLOCK_XS = registerHardBlock("amber_block_xs", 2f, BlockSoundGroup.METAL);
-    public static final Block AMBER_BLOCK_S = registerHardBlock("amber_block_s", 2.5f, BlockSoundGroup.METAL);
-    public static final Block AMBER_BLOCK_M = registerHardBlock("amber_block_m", 3f, BlockSoundGroup.METAL);
-    public static final Block AMBER_BLOCK_L = registerHardBlock("amber_block_l", 3.5f, BlockSoundGroup.METAL);
-    public static final Block AMBER_BLOCK_XL = registerHardBlock("amber_block_xl", 4f, BlockSoundGroup.METAL);
+    public static final Block AMBER_BLOCK_XS = registerHardBlock("amber_block_xs", 2f);
+    public static final Block AMBER_BLOCK_S = registerHardBlock("amber_block_s", 2.5f);
+    public static final Block AMBER_BLOCK_M = registerHardBlock("amber_block_m", 3f);
+    public static final Block AMBER_BLOCK_L = registerHardBlock("amber_block_l", 3.5f);
+    public static final Block AMBER_BLOCK_XL = registerHardBlock("amber_block_xl", 4f);
 
     public static final Block AMBER_ORE = registerOreBlock("amber_ore", 2, 5,
             3.5f, BlockSoundGroup.STONE);
@@ -61,9 +61,9 @@ public class JurassicBlocks {
                     .nonOpaque().strength(3f).requiresTool().sounds(BlockSoundGroup.GLASS).luminance(value -> 1)));
 
 
-    private static Block registerHardBlock(String name, float strength, BlockSoundGroup sound) {
+    private static Block registerHardBlock(String name, float strength) {
         return registerBlock(name, new Block(AbstractBlock.Settings.create()
-                .strength(strength).requiresTool().sounds(sound)));
+                .strength(strength).requiresTool().sounds(BlockSoundGroup.METAL)));
     }
 
     private static Block registerOreBlock(String name, int minXP, int maxXP, float strength, BlockSoundGroup sound) {
