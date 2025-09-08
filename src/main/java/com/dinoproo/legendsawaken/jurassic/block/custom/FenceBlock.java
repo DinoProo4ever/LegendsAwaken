@@ -43,9 +43,27 @@ public class FenceBlock extends net.minecraft.block.FenceBlock {
     }
 
     @Override
+    public boolean canConnect(BlockState state, boolean neighborIsFullSquare, Direction dir) {
+        Block neighborBlock = state.getBlock();
+
+        return neighborBlock instanceof FenceBlock
+                || neighborBlock instanceof FenceGateBlock
+                || neighborIsFullSquare;
+    }
+
+    @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         boolean solidBelow = world.getBlockState(pos.down()).isFullCube(world, pos.down());
         BlockState updated = super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+
+        boolean connectToGate = neighborState.getBlock() instanceof FenceGateBlock;
+        switch (direction) {
+            case NORTH -> updated = updated.with(NORTH, connectToGate || updated.get(NORTH));
+            case SOUTH -> updated = updated.with(SOUTH, connectToGate || updated.get(SOUTH));
+            case EAST -> updated = updated.with(EAST, connectToGate || updated.get(EAST));
+            case WEST -> updated = updated.with(WEST, connectToGate || updated.get(WEST));
+        }
+
         return updated.with(HAS_SUPPORT, solidBelow);
     }
 

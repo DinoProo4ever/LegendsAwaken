@@ -3,8 +3,9 @@ package com.dinoproo.legendsawaken;
 import com.dinoproo.legendsawaken.block.ModBlocks;
 import com.dinoproo.legendsawaken.jurassic.block.JurassicBlocks;
 import com.dinoproo.legendsawaken.jurassic.block.entity.JurassicBlockEntities;
-import com.dinoproo.legendsawaken.jurassic.block.entity.renderer.CultivatorBlockEntityRenderer;
-import com.dinoproo.legendsawaken.jurassic.block.entity.renderer.DNAHybridizerBlockEntityRenderer;
+import com.dinoproo.legendsawaken.jurassic.block.entity.client.CultivatorRenderer;
+import com.dinoproo.legendsawaken.jurassic.block.entity.client.DNAHybridizerRenderer;
+import com.dinoproo.legendsawaken.jurassic.block.entity.client.FenceGateRenderer;
 import com.dinoproo.legendsawaken.jurassic.entity.JurassicEntities;
 import com.dinoproo.legendsawaken.jurassic.entity.client.BRCRenderer;
 import com.dinoproo.legendsawaken.jurassic.entity.client.VLCRenderer;
@@ -52,6 +53,7 @@ public class LegendsAwakenClient implements ClientModInitializer {
         });
 
         BlockRenderLayerMap.INSTANCE.putBlock(JurassicBlocks.LOW_SECURITY_FENCE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(JurassicBlocks.FENCE_GATE, RenderLayer.getTranslucent());
 
         BlockRenderLayerMap.INSTANCE.putBlock(JurassicBlocks.DNA_EXTRACTOR, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(JurassicBlocks.DNA_ENHANCER, RenderLayer.getTranslucent());
@@ -65,10 +67,12 @@ public class LegendsAwakenClient implements ClientModInitializer {
 
         HandledScreens.register(JurassicScreenHandlers.DNA_ENHANCER_SCREEN_HANDLER, DNAEnhancerScreen::new);
 
-        BlockEntityRendererFactories.register(JurassicBlockEntities.DNA_HYBRIDIZER_BE, DNAHybridizerBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(JurassicBlockEntities.FENCE_GATE_BE, ctx -> new FenceGateRenderer());
+
+        BlockEntityRendererFactories.register(JurassicBlockEntities.DNA_HYBRIDIZER_BE, DNAHybridizerRenderer::new);
         HandledScreens.register(JurassicScreenHandlers.DNA_HYBRIDIZER_SCREEN_HANDLER, DNAHybridizerScreen::new);
 
-        BlockEntityRendererFactories.register(JurassicBlockEntities.CULTIVATOR_BE, CultivatorBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(JurassicBlockEntities.CULTIVATOR_BE, CultivatorRenderer::new);
         HandledScreens.register(JurassicScreenHandlers.CULTIVATOR_SCREEN_HANDLER, CultivatorScreen::new);
     }
 }

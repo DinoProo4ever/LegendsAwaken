@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-08T13:57:56.7885314	Legends Awaken/Model Definitions
+// 1.21.1	2025-09-07T12:44:48.1160837	Legends Awaken/Model Definitions
 7dbd089488ff50033625ad3e6e11c0f27877bb88 assets\legendsawaken\models\item\silica_pearls.json
 4d907ff9b4767ff062d28d40a63edd5db7592271 assets\legendsawaken\models\block\calcite_stairs_outer.json
 06a7393a58aa5737b77d496e4a3fe27c7242863c assets\legendsawaken\models\item\amber_xl.json
@@ -21,8 +21,8 @@ ac971d03508940a65749083194dc1b4543ab9717 assets\legendsawaken\models\block\deeps
 ab5f8fdb9ba536a2888373ba422cb20baedc2910 assets\legendsawaken\models\item\rich_amber_ore.json
 dea8758d86b771bb2ca98674f2c5083df51f49ef assets\legendsawaken\models\block\steel_block.json
 731f0997825e589fe3dd9179c372e37e8a353759 assets\legendsawaken\models\block\steel_door_bottom_left_open.json
-54b4e95f723ccbcc491c12da40609cb07bdfa414 assets\legendsawaken\models\item\amber_m.json
 9a2b9b2b97117efcaa85612671b3e849f151d89d assets\legendsawaken\models\item\syringe.json
+54b4e95f723ccbcc491c12da40609cb07bdfa414 assets\legendsawaken\models\item\amber_m.json
 cccf7be710d2ec1e37b03c86ad4ad1c163dc6f7c assets\legendsawaken\models\item\amber_block_m.json
 6f7ced05a6b7d3af2760b9717dd177c479804617 assets\legendsawaken\models\item\amber_block_s.json
 843a360dac90ac4f9cae35478ac83cd0683778ed assets\legendsawaken\models\item\amber_block_xl.json
@@ -42,8 +42,8 @@ bff48f6aeaf6b908b2c4526b69cf3dba2adcb991 assets\legendsawaken\models\item\calcit
 4fd0b9869f9412a5a791c2bb71698585ab78fc02 assets\legendsawaken\models\block\amber_block_xl.json
 e55712e3b50ff9043c51fd9827364f1388e2edf4 assets\legendsawaken\models\item\element_dust.json
 940d8ee793e9c4ccf9fd84a9572b54d5dcebd90c assets\legendsawaken\blockstates\steel_door.json
-3f87cb268f902df27c80ad3f8641303f09fe5d35 assets\legendsawaken\models\block\steel_door_top_right_open.json
 da59da651b981f08d1b477ea3db4a145d6aa2339 assets\legendsawaken\blockstates\amber_block_s.json
+3f87cb268f902df27c80ad3f8641303f09fe5d35 assets\legendsawaken\models\block\steel_door_top_right_open.json
 d91d037987518441b1f0f1fb3c23ffa20483536d assets\legendsawaken\models\block\amber_block_s.json
 456ddd88fdafd63e4d767b0f58a473637eacdd5c assets\legendsawaken\models\item\growth_inhibitor.json
 1db05e208a2833ec50de25530e15c9f2aa6ade34 assets\legendsawaken\models\block\calcite_stairs.json
@@ -88,8 +88,8 @@ d94c8b5640e259df44f6b59995d9e23bd1239b6b assets\legendsawaken\models\block\calci
 d3a25f8fb27e316ef633e142c5dd0f35a8af10a6 assets\legendsawaken\models\block\amber_ore.json
 b62db4d4fda787c05e0d39692cd26ac80385b906 assets\legendsawaken\models\item\holo_emitter.json
 78347173360c7964bda75847ce152a2bb2b19497 assets\legendsawaken\models\block\steel_stairs.json
-6e5fa3369767aff1ae2d939a6a003a02f90eb966 assets\legendsawaken\blockstates\amber_block_l.json
 1c0315b0509156ee0cac9ac494bb5002b2543beb assets\legendsawaken\blockstates\amber_block_xs.json
+6e5fa3369767aff1ae2d939a6a003a02f90eb966 assets\legendsawaken\blockstates\amber_block_l.json
 a11aa767a70f1cc7ceb6807c47181fe22295e13a assets\legendsawaken\models\block\steel_door_bottom_left.json
 ef10bc4bc6a16515b343dade9ef8771d62f0da70 assets\legendsawaken\models\block\steel_door_bottom_right_open.json
 4f9e683dd39a73f3365b227ef8add8eea05c0858 assets\legendsawaken\models\block\calcite_slab_top.json

@@ -133,12 +133,14 @@ public class VLCEntity extends LegendsEntity {
                 })
         );
 
-        controllers.add(new AnimationController<>(this, "attack_controller", 0, state -> {
-            if (this.isAttacking()) {
-                return state.setAndContinue(RawAnimation.begin().thenPlay("animation.velociraptor.attack"));
-            }
-            return PlayState.STOP;
-        }));
+        controllers.add(
+                new AnimationController<>(this, "attack_controller", 0, state -> {
+                    if (this.isAttacking()) {
+                        return state.setAndContinue(RawAnimation.begin().thenPlay("animation.velociraptor.attack"));
+                    }
+                    return PlayState.STOP;
+                })
+        );
     }
 
     public Variant getVariant() {

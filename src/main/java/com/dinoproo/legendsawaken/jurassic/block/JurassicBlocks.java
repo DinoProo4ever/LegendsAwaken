@@ -35,8 +35,11 @@ public class JurassicBlocks {
             new ElectrifiedFenceBlock(AbstractBlock.Settings.create()
                     .strength(3F).nonOpaque().requiresTool().sounds(BlockSoundGroup.METAL), 0.5F));
 
+    public static final Block FENCE_GATE = registerBlock("fence_gate",
+            new FenceGateBlock(AbstractBlock.Settings.create().strength(12F).nonOpaque().requiresTool().sounds(BlockSoundGroup.METAL)));
+
     public static final Block TEN_K_VOLTS_SIGN = registerBlock("10k_volts_sign",
-            new TenKVoltsSignBlock(AbstractBlock.Settings.create().noCollision().sounds(BlockSoundGroup.STONE)));
+            new FenceSignBlock(AbstractBlock.Settings.create().noCollision().sounds(BlockSoundGroup.STONE)));
 
     //Eggs
     public static final Block VLC_EGG = registerBlock("velociraptor_egg",

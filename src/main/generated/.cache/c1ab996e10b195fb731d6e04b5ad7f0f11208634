@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-08T13:57:56.7830477	Legends Awaken/Block Loot Tables
+// 1.21.1	2025-09-07T12:44:48.1092103	Legends Awaken/Block Loot Tables
 4a846b921650576703185a4e3c99fc255091feee data\legendsawaken\loot_table\blocks\reinforced_glass.json
 e82327e27f600fba764331dac96e43802ca2b4c4 data\legendsawaken\loot_table\blocks\amber_block_xs.json
 c1ed03e272974dd33a74a7f96dd44cd186e5a83d data\legendsawaken\loot_table\blocks\amber_block_xl.json
@@ -9,13 +9,14 @@ e65a0e62f0cd9ee030af14999042edff56cd18f4 data\legendsawaken\loot_table\blocks\cu
 8bea3da50f1810eb06b21fe66bb374023b1d7b25 data\legendsawaken\loot_table\blocks\velociraptor_egg.json
 239f2f4588e221da1edccc26c0faea99b6466535 data\legendsawaken\loot_table\blocks\steel_door.json
 2827b573ad7a218e9d17a1ff57086651f8588a1f data\legendsawaken\loot_table\blocks\dna_extractor.json
-a612b899e406e78f89c3ee0e5c6fd280ccef3149 data\legendsawaken\loot_table\blocks\steel_trapdoor.json
 a8e9e1aa1b9afe482c81cd062c526b8f366cca62 data\legendsawaken\loot_table\blocks\dna_enhancer.json
+a612b899e406e78f89c3ee0e5c6fd280ccef3149 data\legendsawaken\loot_table\blocks\steel_trapdoor.json
 360ba8718b277b86e594e2e8e6a3c9dbcb103803 data\legendsawaken\loot_table\blocks\amber_block_l.json
 fc6dd1cf09782fbeb3901c4c08671c2419d9d0e8 data\legendsawaken\loot_table\blocks\calcite_slab.json
 e9bc53f3240d8bdb3ef97b994a3b93d0e0453784 data\legendsawaken\loot_table\blocks\dna_hybridizer.json
 209e6602495c37efa19d929ec9ac544707488f5a data\legendsawaken\loot_table\blocks\calcite_stairs.json
 75a9b99f58a84293c4abfc0622afe69798272427 data\legendsawaken\loot_table\blocks\low_security_fence.json
 e674e423be4b449b36ef5224daeebe0f1fe26747 data\legendsawaken\loot_table\blocks\amber_block_s.json
+6589fc28669490dc110f1f921dba913e5adf50de data\legendsawaken\loot_table\blocks\fence_gate.json
 04ebf0c4606fc45a7242b9d04e4e691ccc5103fa data\legendsawaken\loot_table\blocks\steel_stairs.json
 01a8f79a52cc0d3628c9b78fa9fd3e0237bb8607 data\legendsawaken\loot_table\blocks\steel_slab.json

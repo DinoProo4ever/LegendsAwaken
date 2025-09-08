@@ -37,6 +37,7 @@ public class ModBlockTags extends FabricTagProvider.BlockTagProvider {
                 .add(JurassicBlocks.DEEPSLATE_RICH_AMBER_ORE)
 
                 .add(JurassicBlocks.LOW_SECURITY_FENCE)
+                .add(JurassicBlocks.FENCE_GATE)
 
                 .add(JurassicBlocks.DNA_EXTRACTOR)
                 .add(JurassicBlocks.DNA_ENHANCER)
@@ -61,7 +62,8 @@ public class ModBlockTags extends FabricTagProvider.BlockTagProvider {
                 .add(JurassicBlocks.AMBER_ORE)
                 .add(JurassicBlocks.DEEPSLATE_AMBER_ORE)
 
-                .add(JurassicBlocks.LOW_SECURITY_FENCE);
+                .add(JurassicBlocks.LOW_SECURITY_FENCE)
+                .add(JurassicBlocks.FENCE_GATE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(JurassicBlocks.RICH_AMBER_ORE)

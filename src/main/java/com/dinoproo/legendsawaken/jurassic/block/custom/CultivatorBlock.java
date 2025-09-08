@@ -42,6 +42,8 @@ public class CultivatorBlock extends BlockWithEntity implements BlockEntityProvi
     private static final VoxelShape UPPER_SHAPE =
             VoxelShapes.union(TOP_SHAPE_0, TOP_SHAPE_1, TOP_SHAPE_2);
 
+    public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
+
     public static final MapCodec<CultivatorBlock> CODEC = CultivatorBlock.createCodec(CultivatorBlock::new);
 
     public CultivatorBlock(Settings settings) {
@@ -108,8 +110,6 @@ public class CultivatorBlock extends BlockWithEntity implements BlockEntityProvi
         return validateTicker(type, JurassicBlockEntities.CULTIVATOR_BE,
                 (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
-
-    public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

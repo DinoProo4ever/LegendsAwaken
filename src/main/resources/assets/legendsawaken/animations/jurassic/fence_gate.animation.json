@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.fence_gate.open": {
+			"animation_length": 4,
+			"bones": {
+				"gate": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"4.0": [32, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.fence_gate.close": {
+			"animation_length": 4,
+			"bones": {
+				"gate": {
+					"position": {
+						"0.0": [32, 0, 0],
+						"4.0": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

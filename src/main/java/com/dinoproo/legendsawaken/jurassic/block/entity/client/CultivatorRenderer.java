@@ -1,4 +1,4 @@
-package com.dinoproo.legendsawaken.jurassic.block.entity.renderer;
+package com.dinoproo.legendsawaken.jurassic.block.entity.client;
 
 import com.dinoproo.legendsawaken.jurassic.block.entity.custom.CultivatorBlockEntity;
 import net.minecraft.client.MinecraftClient;
@@ -18,8 +18,8 @@ import net.minecraft.world.World;
 
 import java.util.Objects;
 
-public class CultivatorBlockEntityRenderer implements BlockEntityRenderer<CultivatorBlockEntity> {
-    public CultivatorBlockEntityRenderer(BlockEntityRendererFactory.Context context) {
+public class CultivatorRenderer implements BlockEntityRenderer<CultivatorBlockEntity> {
+    public CultivatorRenderer(BlockEntityRendererFactory.Context context) {
 
     }
 

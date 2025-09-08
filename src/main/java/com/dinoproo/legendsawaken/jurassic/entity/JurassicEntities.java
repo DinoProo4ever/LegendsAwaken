@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 public class JurassicEntities {
     public static final EntityType<VLCEntity> VELOCIRAPTOR = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(LegendsAwaken.MOD_ID, "velociraptor"),
-            EntityType.Builder.create(VLCEntity::new, SpawnGroup.CREATURE).dimensions(6f, 14f).build());
+            EntityType.Builder.create(VLCEntity::new, SpawnGroup.CREATURE).build());
 
     public static final EntityType<BRCEntity> BRACHIOSAURUS = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(LegendsAwaken.MOD_ID, "brachiosaurus"),

@@ -71,7 +71,7 @@ public record CultivatingRecipe(Ingredient eggItem, Ingredient dnaItem, String e
                 Codec.STRING.fieldOf("species").forGetter(CultivatingRecipe::expectedSpecies),
                 Codec.INT.fieldOf("min_level").forGetter(CultivatingRecipe::minLevel),
                 ItemStack.CODEC.fieldOf("result").forGetter(CultivatingRecipe::output)
-        ).apply(inst,   CultivatingRecipe::new));
+                ).apply(inst, CultivatingRecipe::new));
 
         public static final PacketCodec<RegistryByteBuf, CultivatingRecipe> STREAM_CODEC =
                 PacketCodec.tuple(

@@ -16,6 +16,7 @@ import com.dinoproo.legendsawaken.jurassic.sound.JurassicSounds;
 import com.dinoproo.legendsawaken.jurassic.util.JurassicSpecies;
 import com.dinoproo.legendsawaken.player.ModPlayerEntityHandler;
 import com.dinoproo.legendsawaken.player.PlayerStatsComponent;
+import com.dinoproo.legendsawaken.recipe.ModRecipes;
 import com.dinoproo.legendsawaken.screen.ModScreenHandlers;
 import com.dinoproo.legendsawaken.tensura.item.TenSuraItems;
 import com.dinoproo.legendsawaken.world.gen.ModWorldGeneration;
@@ -52,6 +53,8 @@ public class LegendsAwaken implements ModInitializer {
 		FuelRegistry.INSTANCE.add(ModItems.ELEMENT, 32000);
 
 		ModScreenHandlers.registerScreenHandlers();
+
+        ModRecipes.registerRecipes();
 
 		ModWorldGeneration.generateModWorldGen();
 

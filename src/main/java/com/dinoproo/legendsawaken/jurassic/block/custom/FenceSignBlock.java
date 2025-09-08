@@ -10,11 +10,11 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.Nullable;
 
-public class TenKVoltsSignBlock extends Block {
+public class FenceSignBlock extends Block {
 
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
 
-    public TenKVoltsSignBlock(Settings settings) {
+    public FenceSignBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
     }

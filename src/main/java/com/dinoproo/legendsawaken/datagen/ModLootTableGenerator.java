@@ -35,6 +35,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(JurassicBlocks.LOW_SECURITY_FENCE);
 
+        addDrop(JurassicBlocks.FENCE_GATE);
+
         addDrop(JurassicBlocks.VLC_EGG);
 
         addDrop(JurassicBlocks.DNA_EXTRACTOR);

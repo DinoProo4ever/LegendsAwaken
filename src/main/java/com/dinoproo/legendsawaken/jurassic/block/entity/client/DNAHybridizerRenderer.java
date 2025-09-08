@@ -1,4 +1,4 @@
-package com.dinoproo.legendsawaken.jurassic.block.entity.renderer;
+package com.dinoproo.legendsawaken.jurassic.block.entity.client;
 
 import com.dinoproo.legendsawaken.jurassic.block.entity.custom.DNAHybridizerBlockEntity;
 import net.minecraft.client.MinecraftClient;
@@ -17,8 +17,8 @@ import net.minecraft.world.World;
 
 import java.util.Objects;
 
-public class DNAHybridizerBlockEntityRenderer implements BlockEntityRenderer<DNAHybridizerBlockEntity> {
-    public DNAHybridizerBlockEntityRenderer(BlockEntityRendererFactory.Context context) {
+public class DNAHybridizerRenderer implements BlockEntityRenderer<DNAHybridizerBlockEntity> {
+    public DNAHybridizerRenderer(BlockEntityRendererFactory.Context context) {
 
     }
 

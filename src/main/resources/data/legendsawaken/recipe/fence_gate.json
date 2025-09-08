@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "multi_bench",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "legendsawaken:steel_block"
+    }
+  },
+  "result": {
+    "id": "legendsawaken:fence_gate"
+  }
+}
