@@ -1,7 +1,19 @@
-// 1.21.1	2025-09-07T12:44:48.1112192	Legends Awaken/Tags for minecraft:block
-734a506961c6b60c8725547fc4e21aff800ee613 data\minecraft\tags\block\fences.json
-65eeaa44fbbb6738f13429d03d065f66069dc250 data\minecraft\tags\block\walls.json
+// 1.21.1	2025-09-12T13:07:17.3019734	Legends Awaken/Tags for minecraft:block
+99efed51e76df3d56872e85f5f17f35ed2c870de data\minecraft\tags\block\mineable\axe.json
+79fd8336b0cfdf557eb1d1b4dfbdd38cb8b761a2 data\minecraft\tags\block\mineable\hoe.json
+194f4a011407fbae3d933dc495e409b75e1e4301 data\minecraft\tags\block\wooden_stairs.json
+e1bebee476f31dea4de27e94a92300b84b292113 data\minecraft\tags\block\wooden_trapdoors.json
+730d16c98cd0147c48abbf1054b91c2d9c279ee5 data\minecraft\tags\block\logs_that_burn.json
+be40016633ab39193463cd0025d1ea1b24ae793f data\minecraft\tags\block\wooden_pressure_plates.json
+33bc478c0d62d6c2ecc852819c81c76f743e9d29 data\minecraft\tags\block\fence_gates.json
+fc620b2f26b68735610610f7759eeb4b73c9cad3 data\minecraft\tags\block\wooden_buttons.json
 2af9a53d5728dbe3b51db5f611429200b2d69e61 data\minecraft\tags\block\needs_iron_tool.json
-29f122d64effa89c295a8ea3755417b856bcd10f data\minecraft\tags\block\needs_stone_tool.json
+c44a8d55a99434c36c54db69bda28113e3c676ca data\minecraft\tags\block\wooden_slabs.json
 1f2f942c8d17aaf9a1bb1ef61f7c972501f2dea2 data\minecraft\tags\block\mineable\pickaxe.json
+29f122d64effa89c295a8ea3755417b856bcd10f data\minecraft\tags\block\needs_stone_tool.json
 19bd16955f7ad4d9585ebc70699cda66a026933d data\minecraft\tags\block\needs_diamond_tool.json
+3499d8cae5f8e96d20f792fbb7a463d86fb82390 data\minecraft\tags\block\wooden_fences.json
+952788a0a60a640282eb1d6d912a09e2be697515 data\minecraft\tags\block\wooden_doors.json
+eddd0a43116642b2a4efabc94091eb1fd9a4e742 data\minecraft\tags\block\fences.json
+730d16c98cd0147c48abbf1054b91c2d9c279ee5 data\legendsawaken\tags\block\sequoia_logs.json
+714240f2b26d5371276bfe129872dd99dc82683f data\minecraft\tags\block\walls.json

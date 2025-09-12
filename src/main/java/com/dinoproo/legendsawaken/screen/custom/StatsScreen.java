@@ -117,7 +117,7 @@ public class StatsScreen extends Screen {
         if (currentLevel >= PlayerStatsComponent.MAX_LEVEL) {
             context.drawText(textRenderer, Text.literal("XP: MAX LEVEL"), x + 12, y + 34, 0x55FFAA, true);
         } else {
-            context.drawText(textRenderer, Text.literal("XP: " + currentXp + " / " + PlayerStatsComponent.getXpForLevel(currentLevel + 1)), x + 12, y + 34, 0x55FFAA, true);
+            context.drawText(textRenderer, Text.literal("XP: " + (float)currentXp + " / " + PlayerStatsComponent.getXpForLevel(currentLevel + 1)), x + 12, y + 34, 0x55FFAA, true);
         }
 
         int xpBarWidth = 152;

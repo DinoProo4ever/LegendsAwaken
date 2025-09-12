@@ -30,6 +30,6 @@ public class JurassicBlockEntities {
                     BlockEntityType.Builder.create(FenceGateBlockEntity::new, JurassicBlocks.FENCE_GATE).build(null));
 
     public static void registerBlockEntities() {
-        LegendsAwaken.LOGGER.info("Registering Jurassic Park Blocks Block Entities for " + LegendsAwaken.MOD_ID);
+        LegendsAwaken.LOGGER.info("Registering Jurassic Park Block Entities for " + LegendsAwaken.MOD_ID);
     }
 }

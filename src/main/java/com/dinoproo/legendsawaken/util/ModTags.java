@@ -9,6 +9,8 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> SEQUOIA_LOGS = createTag("sequoia_logs");
+
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(LegendsAwaken.MOD_ID, name));
         }
@@ -17,6 +19,8 @@ public class ModTags {
     public static class Items{
         public static final TagKey<Item> KERATIN = createTag("keratin");
         public static final TagKey<Item> POLYMER = createTag("polymer");
+
+        public static final TagKey<Item> SEQUOIA_LOGS = createTag("sequoia_logs");
 
         public static final TagKey<Item> AMBER = createTag("amber");
 

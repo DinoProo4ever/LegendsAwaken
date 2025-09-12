@@ -1,6 +1,8 @@
 package com.dinoproo.legendsawaken;
 
 import com.dinoproo.legendsawaken.block.ModBlocks;
+import com.dinoproo.legendsawaken.block.entity.ModBlockEntities;
+import com.dinoproo.legendsawaken.block.entity.client.GiantFernRenderer;
 import com.dinoproo.legendsawaken.jurassic.block.JurassicBlocks;
 import com.dinoproo.legendsawaken.jurassic.block.entity.JurassicBlockEntities;
 import com.dinoproo.legendsawaken.jurassic.block.entity.client.CultivatorRenderer;
@@ -19,12 +21,15 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.world.biome.FoliageColors;
 import org.lwjgl.glfw.GLFW;
 
 public class LegendsAwakenClient implements ClientModInitializer {
@@ -32,10 +37,21 @@ public class LegendsAwakenClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SEQUOIA_SAPLING, RenderLayer.getCutout());
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> world != null && pos != null ? BiomeColors.getFoliageColor(world, pos) : FoliageColors.getDefaultColor(),
+                ModBlocks.SEQUOIA_LEAVES
+        );
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> FoliageColors.getDefaultColor(),
+                ModBlocks.SEQUOIA_LEAVES
+        );
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.REINFORCED_GLASS, RenderLayer.getTranslucent());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STEEL_DOOR, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STEEL_TRAPDOOR, RenderLayer.getTranslucent());
+
+        BlockEntityRendererFactories.register(ModBlockEntities.GIANT_FERN_BE, ctx -> new GiantFernRenderer());
 
         openStatsKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.legendsawaken.open_stats",

@@ -1,6 +1,7 @@
 package com.dinoproo.legendsawaken;
 
 import com.dinoproo.legendsawaken.block.ModBlocks;
+import com.dinoproo.legendsawaken.block.entity.ModBlockEntities;
 import com.dinoproo.legendsawaken.command.StatsCommand;
 import com.dinoproo.legendsawaken.component.ModComponents;
 import com.dinoproo.legendsawaken.component.ModDataComponents;
@@ -19,13 +20,16 @@ import com.dinoproo.legendsawaken.player.PlayerStatsComponent;
 import com.dinoproo.legendsawaken.recipe.ModRecipes;
 import com.dinoproo.legendsawaken.screen.ModScreenHandlers;
 import com.dinoproo.legendsawaken.tensura.item.TenSuraItems;
+import com.dinoproo.legendsawaken.world.tree.ModTreePlacers;
 import com.dinoproo.legendsawaken.world.gen.ModWorldGeneration;
 import com.dinoproo.legendsawaken.xp.ModXpEvents;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,11 +56,29 @@ public class LegendsAwaken implements ModInitializer {
 
 		FuelRegistry.INSTANCE.add(ModItems.ELEMENT, 32000);
 
+        StrippableBlockRegistry.register(ModBlocks.SEQUOIA_LOG, ModBlocks.STRIPPED_SEQUOIA_LOG);
+        StrippableBlockRegistry.register(ModBlocks.SEQUOIA_WOOD, ModBlocks.STRIPPED_SEQUOIA_WOOD);
+
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SEQUOIA_LOG, 5 ,5);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SEQUOIA_WOOD, 5 ,5);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_SEQUOIA_LOG, 5 ,5);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_SEQUOIA_WOOD, 5 ,5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SEQUOIA_PLANKS, 5 ,20);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SEQUOIA_STAIRS, 5 ,20);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SEQUOIA_SLAB, 5 ,20);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SEQUOIA_FENCE, 5 ,20);
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SEQUOIA_FENCE_GATE, 5 ,20);
+
+        FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SEQUOIA_LEAVES, 30 ,60);
+
+        ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
 
         ModRecipes.registerRecipes();
 
-		ModWorldGeneration.generateModWorldGen();
+        ModWorldGeneration.generateModWorldGen();
+        ModTreePlacers.registerTreePlacers();
 
 
 		JurassicItems.registerJurassicItems();

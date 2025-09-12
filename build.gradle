@@ -35,6 +35,9 @@ repositories {
 		name = "Ladysnake Mods"
 		url = 'https://maven.ladysnake.org/releases'
 	}
+
+    //TerraBlender
+    maven { url 'https://maven.minecraftforge.net/' }
 }
 
 fabricApi {
@@ -73,6 +76,9 @@ dependencies {
 	//Cardinal Components
 	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-base:${cca_version}"
 	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-entity:${cca_version}"
+
+    //TerraBlender
+    modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21.1-4.1.0.8'
 }
 
 processResources {

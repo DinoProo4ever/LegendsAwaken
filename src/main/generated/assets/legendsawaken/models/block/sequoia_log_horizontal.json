@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "legendsawaken:block/sequoia_log_top",
+    "side": "legendsawaken:block/sequoia_log"
+  }
+}

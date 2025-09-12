@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "legendsawaken",
-	"version": "0.3.0}",
+	"version": "0.3.2",
 	"name": "Legends Awaken",
 	"description": "An ambitious and exciting project! Combining content from Jurassic Park, How to Train Your Dragon, Ninjago, TenSura, The Lion King, and some ARK mechanics.",
 	"authors": [
@@ -39,7 +39,10 @@
 		],
 		"cardinal-components": [
 			"com.dinoproo.legendsawaken.component.ModComponents"
-		]
+		],
+        "terrablender": [
+          "com.dinoproo.legendsawaken.world.biome.ModTerraBlenderAPI"
+        ]
 	},
 	"mixins": [
 		"legendsawaken.mixins.json"

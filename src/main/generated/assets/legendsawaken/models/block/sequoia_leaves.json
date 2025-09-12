@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "legendsawaken:block/sequoia_leaves"
+  }
+}

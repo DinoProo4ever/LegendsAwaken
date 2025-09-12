@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "legendsawaken:block/sequoia_sapling"
+  }
+}

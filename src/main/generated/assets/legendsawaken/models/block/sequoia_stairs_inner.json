@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "legendsawaken:block/sequoia_planks",
+    "side": "legendsawaken:block/sequoia_planks",
+    "top": "legendsawaken:block/sequoia_planks"
+  }
+}

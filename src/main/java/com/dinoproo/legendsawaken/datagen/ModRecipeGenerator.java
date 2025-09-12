@@ -4,6 +4,7 @@ import com.dinoproo.legendsawaken.block.ModBlocks;
 import com.dinoproo.legendsawaken.item.ModItems;
 import com.dinoproo.legendsawaken.jurassic.block.JurassicBlocks;
 import com.dinoproo.legendsawaken.jurassic.item.JurassicItems;
+import com.dinoproo.legendsawaken.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
@@ -20,6 +21,30 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
+        offerBarkBlockRecipe(exporter, ModBlocks.SEQUOIA_WOOD, ModBlocks.SEQUOIA_LOG);
+        offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_SEQUOIA_WOOD, ModBlocks.STRIPPED_SEQUOIA_LOG);
+
+        offerPlanksRecipe(exporter, ModBlocks.SEQUOIA_PLANKS, ModTags.Items.SEQUOIA_LOGS, 4);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SEQUOIA_SLAB, ModBlocks.SEQUOIA_PLANKS);
+        offerPressurePlateRecipe(exporter, ModBlocks.SEQUOIA_PRESSURE_PLATE, ModBlocks.SEQUOIA_PLANKS);
+        offerShapelessRecipe(exporter, ModBlocks.SEQUOIA_BUTTON, ModBlocks.SEQUOIA_PLANKS, "misc", 1);
+
+        createStairsRecipe(ModBlocks.SEQUOIA_STAIRS, Ingredient.ofItems(ModBlocks.SEQUOIA_PLANKS))
+                .criterion("has_sequoia_planks",FabricRecipeProvider.conditionsFromItem(ModBlocks.SEQUOIA_PLANKS))
+                .offerTo(exporter);
+        createFenceRecipe(ModBlocks.SEQUOIA_FENCE, Ingredient.ofItems(ModBlocks.SEQUOIA_PLANKS))
+                .criterion("has_sequoia_planks", FabricRecipeProvider.conditionsFromItem(ModBlocks.SEQUOIA_PLANKS))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.SEQUOIA_FENCE_GATE, Ingredient.ofItems(ModBlocks.SEQUOIA_PLANKS))
+                .criterion("has_sequoia_planks", FabricRecipeProvider.conditionsFromItem(ModBlocks.SEQUOIA_PLANKS))
+                .offerTo(exporter);
+        createDoorRecipe(ModBlocks.SEQUOIA_DOOR, Ingredient.ofItems(ModBlocks.SEQUOIA_PLANKS))
+                .criterion("has_sequoia_planks", FabricRecipeProvider.conditionsFromItem(ModBlocks.SEQUOIA_PLANKS))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.SEQUOIA_TRAPDOOR, Ingredient.ofItems(ModBlocks.SEQUOIA_PLANKS))
+                .criterion("has_sequoia_planks", FabricRecipeProvider.conditionsFromItem(ModBlocks.SEQUOIA_PLANKS))
+                .offerTo(exporter);
+
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.STEEL_INGOT,
                 RecipeCategory.DECORATIONS, ModBlocks.STEEL_BLOCK);
 

@@ -1,8 +1,7 @@
 {
 	"variants": {
-		"facing=north": { "model": "legendsawaken:block/fence_gate" },
-		"facing=south": { "model": "legendsawaken:block/fence_gate", "y": 180 },
-		"facing=west":  { "model": "legendsawaken:block/fence_gate", "y": 270 },
-		"facing=east":  { "model": "legendsawaken:block/fence_gate", "y": 90 }
+		"": {
+          "model": "builtin/entity"
+        }
 	}
 }

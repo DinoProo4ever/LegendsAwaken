@@ -22,6 +22,22 @@ public class ModModelGenerator extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator generator) {
         generator.registerSimpleCubeAll(ModBlocks.REINFORCED_GLASS);
 
+        generator.registerLog(ModBlocks.SEQUOIA_LOG).log(ModBlocks.SEQUOIA_LOG).wood(ModBlocks.SEQUOIA_WOOD);
+        generator.registerLog(ModBlocks.STRIPPED_SEQUOIA_LOG).log(ModBlocks.STRIPPED_SEQUOIA_LOG).wood(ModBlocks.STRIPPED_SEQUOIA_WOOD);
+
+        BlockStateModelGenerator.BlockTexturePool sequoiaPool = generator.registerCubeAllModelTexturePool(ModBlocks.SEQUOIA_PLANKS);
+        sequoiaPool.stairs(ModBlocks.SEQUOIA_STAIRS);
+        sequoiaPool.slab(ModBlocks.SEQUOIA_SLAB);
+        sequoiaPool.fence(ModBlocks.SEQUOIA_FENCE);
+        sequoiaPool.fenceGate(ModBlocks.SEQUOIA_FENCE_GATE);
+        generator.registerDoor(ModBlocks.SEQUOIA_DOOR);
+        generator.registerTrapdoor(ModBlocks.SEQUOIA_TRAPDOOR);
+        sequoiaPool.pressurePlate(ModBlocks.SEQUOIA_PRESSURE_PLATE);
+        sequoiaPool.button(ModBlocks.SEQUOIA_BUTTON);
+
+        generator.registerSingleton(ModBlocks.SEQUOIA_LEAVES, TexturedModel.LEAVES);
+        generator.registerTintableCrossBlockState(ModBlocks.SEQUOIA_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
         BlockStateModelGenerator.BlockTexturePool calcitePool = generator.registerCubeAllModelTexturePool(Blocks.CALCITE);
         calcitePool.stairs(ModBlocks.CALCITE_STAIRS);
         calcitePool.slab(ModBlocks.CALCITE_SLAB);
@@ -68,6 +84,8 @@ public class ModModelGenerator extends FabricModelProvider {
         generator.register(ModItems.SYRINGE, Models.HANDHELD);
         generator.register(ModItems.GROWTH_INHIBITOR, Models.HANDHELD);
         generator.register(ModItems.GROWTH_SERUM, Models.HANDHELD);
+
+        generator.register(ModBlocks.SEQUOIA_SAPLING.asItem(), Models.GENERATED);
 
         generator.register(JurassicItems.SYNTETIC_EGG, Models.GENERATED);
 

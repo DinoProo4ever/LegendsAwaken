@@ -16,9 +16,20 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
     public static final ItemGroup BUILDING_BLOCKS_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(LegendsAwaken.MOD_ID, "building_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.STEEL_BLOCK))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SEQUOIA_PLANKS))
                     .displayName(Text.translatable("itemgroup.legendsawaken.building_blocks"))
                     .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.SEQUOIA_LOG);
+                        entries.add(ModBlocks.SEQUOIA_WOOD);
+                        entries.add(ModBlocks.STRIPPED_SEQUOIA_LOG);
+                        entries.add(ModBlocks.STRIPPED_SEQUOIA_WOOD);
+
+                        entries.add(ModBlocks.SEQUOIA_PLANKS);
+                        entries.add(ModBlocks.SEQUOIA_STAIRS);
+                        entries.add(ModBlocks.SEQUOIA_SLAB);
+                        entries.add(ModBlocks.SEQUOIA_FENCE);
+                        entries.add(ModBlocks.SEQUOIA_FENCE_GATE);
+
                         entries.add(ModBlocks.REINFORCED_GLASS);
 
                         entries.add(ModBlocks.CALCITE_STAIRS);
@@ -38,13 +49,17 @@ public class ModItemGroups {
                         entries.add(JurassicBlocks.AMBER_BLOCK_XL);
 
                         entries.add(JurassicBlocks.LOW_SECURITY_FENCE);
+                        entries.add(JurassicBlocks.FENCE_GATE);
                     }).build());
 
     public static final ItemGroup NATURAL_BLOCKS_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(LegendsAwaken.MOD_ID, "natural_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(JurassicBlocks.AMBER_ORE))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SEQUOIA_LEAVES))
                     .displayName(Text.translatable("itemgroup.legendsawaken.natural_blocks"))
                     .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.SEQUOIA_LEAVES);
+                        entries.add(ModBlocks.SEQUOIA_SAPLING);
+
                         entries.add(JurassicBlocks.AMBER_ORE);
                         entries.add(JurassicBlocks.RICH_AMBER_ORE);
                         entries.add(JurassicBlocks.DEEPSLATE_AMBER_ORE);
@@ -60,6 +75,17 @@ public class ModItemGroups {
                         entries.add(JurassicBlocks.DNA_ENHANCER);
                         entries.add(JurassicBlocks.DNA_HYBRIDIZER);
                         entries.add(JurassicBlocks.CULTIVATOR);
+                    }).build());
+
+    public static final ItemGroup REDSTONE_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(LegendsAwaken.MOD_ID, "redstone"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SEQUOIA_PRESSURE_PLATE))
+                    .displayName(Text.translatable("itemgroup.legendsawaken.redstone"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.SEQUOIA_DOOR);
+                        entries.add(ModBlocks.SEQUOIA_TRAPDOOR);
+                        entries.add(ModBlocks.SEQUOIA_PRESSURE_PLATE);
+                        entries.add(ModBlocks.SEQUOIA_BUTTON);
                     }).build());
 
     public static final ItemGroup TOOLS_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,

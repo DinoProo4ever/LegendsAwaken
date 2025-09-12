@@ -3,6 +3,7 @@ package com.dinoproo.legendsawaken.jurassic.entity.custom;
 import com.dinoproo.legendsawaken.entity.custom.LegendsEntity;
 import com.dinoproo.legendsawaken.jurassic.entity.JurassicEntities;
 import net.minecraft.entity.*;
+import net.minecraft.entity.ai.control.MoveControl;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -15,6 +16,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
@@ -30,6 +32,33 @@ import java.util.Comparator;
 public class BRCEntity extends LegendsEntity {
     public BRCEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
+
+        this.moveControl = new MoveControl(this) {
+            @Override
+            public void tick() {
+                if (this.state == State.MOVE_TO) {
+                    double dx = this.targetX - BRCEntity.this.getX();
+                    double dz = this.targetZ - BRCEntity.this.getZ();
+                    double dy = this.targetY - BRCEntity.this.getY();
+                    double distSq = dx * dx + dy * dy + dz * dz;
+
+                    if (distSq < 2.5E-7) {
+                        this.state = State.WAIT;
+                        BRCEntity.this.setMovementSpeed(0);
+                        return;
+                    }
+
+                    float targetYaw = (float)(MathHelper.atan2(dz, dx) * (180F / Math.PI)) - 90.0F;
+                    BRCEntity.this.setYaw(this.wrapDegrees(BRCEntity.this.getYaw(), targetYaw, 6)); // 🔧 gira suave
+                    BRCEntity.this.bodyYaw = BRCEntity.this.getYaw();
+
+                    float speed = (float)(this.speed * BRCEntity.this.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED));
+                    BRCEntity.this.setMovementSpeed(speed);
+                } else {
+                    BRCEntity.this.setMovementSpeed(0);
+                }
+            }
+        };
     }
 
     @Override

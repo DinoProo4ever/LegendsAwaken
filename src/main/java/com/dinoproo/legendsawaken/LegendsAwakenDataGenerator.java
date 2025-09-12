@@ -3,6 +3,7 @@ package com.dinoproo.legendsawaken;
 import com.dinoproo.legendsawaken.datagen.*;
 import com.dinoproo.legendsawaken.world.ModConfiguredFeatures;
 import com.dinoproo.legendsawaken.world.ModPlacedFeatures;
+import com.dinoproo.legendsawaken.world.biome.ModBiomes;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -27,5 +28,6 @@ public class LegendsAwakenDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
-	}
+        registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
+    }
 }

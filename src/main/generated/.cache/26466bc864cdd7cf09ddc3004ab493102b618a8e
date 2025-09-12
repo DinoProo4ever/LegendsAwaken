@@ -1,5 +1,12 @@
-// 1.21.1	2025-09-07T12:44:48.1127243	Legends Awaken/
+// 1.21.1	2025-09-12T13:07:17.3034147	Legends Awaken/
+eed039e7b8e09b3e20fd61659b4ee74f5cb5ae07 data\legendsawaken\worldgen\configured_feature\sequoia_tree.json
 3c4f38d72fbc865b5cbe7c533f3e5ece73522b08 data\legendsawaken\worldgen\placed_feature\rich_amber_ore_placed.json
 2944a5ed50c56ccd8479a7975d8af780f01f5068 data\legendsawaken\worldgen\configured_feature\rich_amber_ore.json
 e48808651766a1966010bbb80001a9f116b8a4f8 data\legendsawaken\worldgen\configured_feature\amber_ore.json
+f06d9a0c6d89f7197222f44c8e1b21538005622e data\legendsawaken\worldgen\configured_feature\giant_fern.json
+58c15d29b231e2466b889458fd4eaffa7040ab71 data\legendsawaken\worldgen\placed_feature\sequoia_placed.json
+bd6ee1bfd9689ad26229c893a8c600a9ecb7eda3 data\legendsawaken\worldgen\biome\redwood_forest.json
+8ea0606d61a8fd0972123ca538b255c298113bfa data\legendsawaken\worldgen\configured_feature\mega_sequoia_tree.json
+51d0cc79a9b34d8c0e5f01ea48beecb1e53c81b8 data\legendsawaken\worldgen\placed_feature\mega_sequoia_placed.json
 3a5bf71a170fb6aa0037235f190b16d1c804d064 data\legendsawaken\worldgen\placed_feature\amber_ore_placed.json
+f3919cc06dba69e45418fec98e55defaedcc11a1 data\legendsawaken\worldgen\placed_feature\giant_fern_placed.json

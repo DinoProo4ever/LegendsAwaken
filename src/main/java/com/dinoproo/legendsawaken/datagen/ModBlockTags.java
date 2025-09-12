@@ -2,6 +2,7 @@ package com.dinoproo.legendsawaken.datagen;
 
 import com.dinoproo.legendsawaken.block.ModBlocks;
 import com.dinoproo.legendsawaken.jurassic.block.JurassicBlocks;
+import com.dinoproo.legendsawaken.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -44,6 +45,25 @@ public class ModBlockTags extends FabricTagProvider.BlockTagProvider {
                 .add(JurassicBlocks.DNA_HYBRIDIZER)
                 .add(JurassicBlocks.CULTIVATOR);
 
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.SEQUOIA_LOG)
+                .add(ModBlocks.SEQUOIA_WOOD)
+                .add(ModBlocks.STRIPPED_SEQUOIA_LOG)
+                .add(ModBlocks.STRIPPED_SEQUOIA_WOOD)
+
+                .add(ModBlocks.SEQUOIA_PLANKS)
+                .add(ModBlocks.SEQUOIA_STAIRS)
+                .add(ModBlocks.SEQUOIA_SLAB)
+                .add(ModBlocks.SEQUOIA_FENCE)
+                .add(ModBlocks.SEQUOIA_FENCE_GATE)
+                .add(ModBlocks.SEQUOIA_DOOR)
+                .add(ModBlocks.SEQUOIA_TRAPDOOR)
+                .add(ModBlocks.SEQUOIA_PRESSURE_PLATE)
+                .add(ModBlocks.SEQUOIA_BUTTON);
+
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .add(ModBlocks.SEQUOIA_LEAVES);
+
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.STEEL_BLOCK)
                 .add(ModBlocks.STEEL_STAIRS)
@@ -70,9 +90,51 @@ public class ModBlockTags extends FabricTagProvider.BlockTagProvider {
                 .add(JurassicBlocks.DEEPSLATE_RICH_AMBER_ORE);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
-                .add(JurassicBlocks.LOW_SECURITY_FENCE);
+                .add(JurassicBlocks.LOW_SECURITY_FENCE)
+
+                .add(JurassicBlocks.FENCE_GATE);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.SEQUOIA_FENCE);
+
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.SEQUOIA_FENCE_GATE);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
+                .add(ModBlocks.SEQUOIA_STAIRS);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
+                .add(ModBlocks.SEQUOIA_SLAB);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
+                .add(ModBlocks.SEQUOIA_DOOR);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
+                .add(ModBlocks.SEQUOIA_TRAPDOOR);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
+                .add(ModBlocks.SEQUOIA_PRESSURE_PLATE);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
+                .add(ModBlocks.SEQUOIA_BUTTON);
 
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(ModBlocks.CALCITE_WALL);
+                .add(ModBlocks.CALCITE_WALL)
+
+                .add(JurassicBlocks.LOW_SECURITY_FENCE)
+
+                .add(JurassicBlocks.FENCE_GATE);
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.SEQUOIA_LOG)
+                .add(ModBlocks.SEQUOIA_WOOD)
+                .add(ModBlocks.STRIPPED_SEQUOIA_LOG)
+                .add(ModBlocks.STRIPPED_SEQUOIA_WOOD);
+
+        getOrCreateTagBuilder(ModTags.Blocks.SEQUOIA_LOGS)
+                .add(ModBlocks.SEQUOIA_LOG)
+                .add(ModBlocks.SEQUOIA_WOOD)
+                .add(ModBlocks.STRIPPED_SEQUOIA_LOG)
+                .add(ModBlocks.STRIPPED_SEQUOIA_WOOD);
     }
 }
