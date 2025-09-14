@@ -23,6 +23,7 @@ public class ModTags {
         public static final TagKey<Item> SEQUOIA_LOGS = createTag("sequoia_logs");
 
         public static final TagKey<Item> AMBER = createTag("amber");
+        public static final TagKey<Item> DNA = createTag("dna");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(LegendsAwaken.MOD_ID, name));

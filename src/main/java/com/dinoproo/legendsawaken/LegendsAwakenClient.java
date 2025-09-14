@@ -28,6 +28,8 @@ import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.client.render.block.entity.HangingSignBlockEntityRenderer;
+import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.world.biome.FoliageColors;
 import org.lwjgl.glfw.GLFW;
@@ -50,6 +52,13 @@ public class LegendsAwakenClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STEEL_DOOR, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STEEL_TRAPDOOR, RenderLayer.getTranslucent());
+
+        BlockEntityRendererFactories.register(
+                ModBlockEntities.SIGN_BE, SignBlockEntityRenderer::new
+        );
+        BlockEntityRendererFactories.register(
+                ModBlockEntities.HANGING_SIGN_BE, HangingSignBlockEntityRenderer::new
+        );
 
         BlockEntityRendererFactories.register(ModBlockEntities.GIANT_FERN_BE, ctx -> new GiantFernRenderer());
 

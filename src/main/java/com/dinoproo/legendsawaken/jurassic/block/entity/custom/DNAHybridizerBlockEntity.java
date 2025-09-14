@@ -4,6 +4,7 @@ import com.dinoproo.legendsawaken.jurassic.block.entity.JurassicBlockEntities;
 import com.dinoproo.legendsawaken.jurassic.recipe.*;
 import com.dinoproo.legendsawaken.jurassic.screen.custom.DNAHybridizerScreenHandler;
 import com.dinoproo.legendsawaken.util.ImplementedInventory;
+import com.dinoproo.legendsawaken.util.ModTags;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -23,6 +24,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -167,6 +169,16 @@ public class DNAHybridizerBlockEntity extends BlockEntity implements ExtendedScr
         int currentCount = this.getStack(OUTPUT_SLOT).getCount();
 
         return maxCount >= currentCount + count;
+    }
+
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
+        if (slot == DNA_SLOT_A) {
+            return stack.isIn(ModTags.Items.DNA);
+        } else if (slot == DNA_SLOT_B) {
+            return stack.isIn(ModTags.Items.DNA);
+        }
+        return false;
     }
 
     @Nullable

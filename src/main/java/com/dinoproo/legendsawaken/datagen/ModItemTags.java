@@ -50,5 +50,9 @@ public class ModItemTags extends FabricTagProvider.ItemTagProvider {
                 .add(JurassicItems.AMBER_M)
                 .add(JurassicItems.AMBER_L)
                 .add(JurassicItems.AMBER_XL);
+
+        getOrCreateTagBuilder(ModTags.Items.DNA)
+                .add(JurassicItems.DNA)
+                .add(JurassicItems.HYBRID_DNA);
     }
 }

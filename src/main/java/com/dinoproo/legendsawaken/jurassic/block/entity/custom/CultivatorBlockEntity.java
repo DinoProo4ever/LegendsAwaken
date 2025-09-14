@@ -1,9 +1,11 @@
 package com.dinoproo.legendsawaken.jurassic.block.entity.custom;
 
 import com.dinoproo.legendsawaken.jurassic.block.entity.JurassicBlockEntities;
+import com.dinoproo.legendsawaken.jurassic.item.JurassicItems;
 import com.dinoproo.legendsawaken.jurassic.recipe.*;
 import com.dinoproo.legendsawaken.jurassic.screen.custom.CultivatorScreenHandler;
 import com.dinoproo.legendsawaken.util.ImplementedInventory;
+import com.dinoproo.legendsawaken.util.ModTags;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -23,6 +25,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -174,6 +177,16 @@ public class CultivatorBlockEntity extends BlockEntity implements ExtendedScreen
         int currentCount = this.getStack(OUTPUT_SLOT).getCount();
 
         return maxCount >= currentCount + count;
+    }
+
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
+        if (slot == EGG_SLOT) {
+            return stack.isIn(ModTags.Items.DNA);
+        } else if (slot == DNA_SLOT) {
+            return stack.isOf(JurassicItems.SYNTETIC_EGG);
+        }
+        return false;
     }
 
     @Nullable

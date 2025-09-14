@@ -1,8 +1,10 @@
 package com.dinoproo.legendsawaken.jurassic.block;
 
 import com.dinoproo.legendsawaken.LegendsAwaken;
+import com.dinoproo.legendsawaken.block.custom.EggBlock;
 import com.dinoproo.legendsawaken.jurassic.block.custom.*;
 import com.dinoproo.legendsawaken.jurassic.block.item.custom.FenceGateBlockItem;
+import com.dinoproo.legendsawaken.jurassic.entity.JurassicEntities;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -14,7 +16,12 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class JurassicBlocks {
+    public static final Map<Identifier, Block> EGGS = new HashMap<>();
+
     //Amber
     public static final Block AMBER_BLOCK_XS = registerHardBlock("amber_block_xs", 2f, BlockSoundGroup.METAL);
     public static final Block AMBER_BLOCK_S = registerHardBlock("amber_block_s", 2.5f, BlockSoundGroup.METAL);
@@ -48,11 +55,6 @@ public class JurassicBlocks {
     public static final Block TEN_K_VOLTS_SIGN = registerBlock("10k_volts_sign",
             new FenceSignBlock(AbstractBlock.Settings.create().noCollision().sounds(BlockSoundGroup.STONE)));
 
-    //Eggs
-    public static final Block VLC_EGG = registerBlock("velociraptor_egg",
-            new VLCEggBlock(AbstractBlock.Settings.create()
-            .nonOpaque().strength(1f).ticksRandomly().sounds(BlockSoundGroup.STONE)));
-
     //Functional
     public static final Block DNA_EXTRACTOR = registerBlock("dna_extractor",
             new DNAExtractorBlock(AbstractBlock.Settings.create()
@@ -67,6 +69,16 @@ public class JurassicBlocks {
             new CultivatorBlock(AbstractBlock.Settings.create()
                     .nonOpaque().strength(3f).requiresTool().sounds(BlockSoundGroup.GLASS).luminance(value -> 1)));
 
+    public static void registerEggs() {
+        JurassicEntities.getAll().forEach((id, entityType) -> {
+            Block eggBlock = registerBlock(
+                    id.getPath() + "_egg",
+                    new EggBlock(entityType, AbstractBlock.Settings.create()
+                            .nonOpaque().strength(1f).ticksRandomly().sounds(BlockSoundGroup.METAL))
+            );
+            EGGS.put(id, eggBlock);
+        });
+    }
 
     private static Block registerHardBlock(String name, float strength, BlockSoundGroup sound) {
         return registerBlock(name, new Block(AbstractBlock.Settings.create()

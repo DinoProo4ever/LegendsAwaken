@@ -1,9 +1,11 @@
 package com.dinoproo.legendsawaken.datagen;
 
 import com.dinoproo.legendsawaken.block.ModBlocks;
+import com.dinoproo.legendsawaken.item.ModItems;
 import com.dinoproo.legendsawaken.jurassic.block.JurassicBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -34,6 +36,11 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SEQUOIA_PRESSURE_PLATE);
         addDrop(ModBlocks.SEQUOIA_BUTTON);
 
+        addDrop(ModBlocks.SEQUOIA_SIGN, ModItems.SEQUOIA_SIGN);
+        addDrop(ModBlocks.SEQUOIA_WALL_SIGN, ModItems.SEQUOIA_SIGN);
+        addDrop(ModBlocks.SEQUOIA_HANGING_SIGN, ModItems.SEQUOIA_HANGING_SIGN);
+        addDrop(ModBlocks.SEQUOIA_WALL_HANGING_SIGN, ModItems.SEQUOIA_HANGING_SIGN);
+
         addDrop(ModBlocks.SEQUOIA_LEAVES, leavesDrops(ModBlocks.SEQUOIA_LEAVES, ModBlocks.SEQUOIA_SAPLING, SAPLING_DROP_CHANCE));
         addDrop(ModBlocks.SEQUOIA_SAPLING);
 
@@ -47,6 +54,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STEEL_DOOR, doorDrops(ModBlocks.STEEL_DOOR));
         addDrop(ModBlocks.STEEL_TRAPDOOR);
 
+        addDrop(ModBlocks.GIANT_FERN, tallPlantDrops(ModBlocks.GIANT_FERN, Blocks.LARGE_FERN));
+
         addDrop(JurassicBlocks.AMBER_BLOCK_XS);
         addDrop(JurassicBlocks.AMBER_BLOCK_S);
         addDrop(JurassicBlocks.AMBER_BLOCK_M);
@@ -57,7 +66,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(JurassicBlocks.FENCE_GATE);
 
-        addDrop(JurassicBlocks.VLC_EGG);
+        JurassicBlocks.EGGS.forEach((id, eggBlock) -> addDrop(eggBlock));
 
         addDrop(JurassicBlocks.DNA_EXTRACTOR);
         addDrop(JurassicBlocks.DNA_ENHANCER);

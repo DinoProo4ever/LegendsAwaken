@@ -28,6 +28,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SEQUOIA_SLAB, ModBlocks.SEQUOIA_PLANKS);
         offerPressurePlateRecipe(exporter, ModBlocks.SEQUOIA_PRESSURE_PLATE, ModBlocks.SEQUOIA_PLANKS);
         offerShapelessRecipe(exporter, ModBlocks.SEQUOIA_BUTTON, ModBlocks.SEQUOIA_PLANKS, "misc", 1);
+        offerHangingSignRecipe(exporter, ModItems.SEQUOIA_HANGING_SIGN, ModBlocks.STRIPPED_SEQUOIA_LOG);
 
         createStairsRecipe(ModBlocks.SEQUOIA_STAIRS, Ingredient.ofItems(ModBlocks.SEQUOIA_PLANKS))
                 .criterion("has_sequoia_planks",FabricRecipeProvider.conditionsFromItem(ModBlocks.SEQUOIA_PLANKS))
@@ -42,6 +43,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion("has_sequoia_planks", FabricRecipeProvider.conditionsFromItem(ModBlocks.SEQUOIA_PLANKS))
                 .offerTo(exporter);
         createTrapdoorRecipe(ModBlocks.SEQUOIA_TRAPDOOR, Ingredient.ofItems(ModBlocks.SEQUOIA_PLANKS))
+                .criterion("has_sequoia_planks", FabricRecipeProvider.conditionsFromItem(ModBlocks.SEQUOIA_PLANKS))
+                .offerTo(exporter);
+        createSignRecipe(ModItems.SEQUOIA_SIGN, Ingredient.ofItems(ModBlocks.SEQUOIA_PLANKS))
                 .criterion("has_sequoia_planks", FabricRecipeProvider.conditionsFromItem(ModBlocks.SEQUOIA_PLANKS))
                 .offerTo(exporter);
 

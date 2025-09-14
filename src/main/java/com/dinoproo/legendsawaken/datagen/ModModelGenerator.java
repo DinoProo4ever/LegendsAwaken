@@ -85,6 +85,9 @@ public class ModModelGenerator extends FabricModelProvider {
         generator.register(ModItems.GROWTH_INHIBITOR, Models.HANDHELD);
         generator.register(ModItems.GROWTH_SERUM, Models.HANDHELD);
 
+        generator.register(ModItems.SEQUOIA_SIGN, Models.GENERATED);
+        generator.register(ModItems.SEQUOIA_HANGING_SIGN, Models.GENERATED);
+
         generator.register(ModBlocks.SEQUOIA_SAPLING.asItem(), Models.GENERATED);
 
         generator.register(JurassicItems.SYNTETIC_EGG, Models.GENERATED);
@@ -103,7 +106,7 @@ public class ModModelGenerator extends FabricModelProvider {
         generator.register(JurassicItems.DNA, Models.GENERATED);
         generator.register(JurassicItems.HYBRID_DNA, Models.GENERATED);
 
-        generator.register(JurassicBlocks.VLC_EGG.asItem(), Models.GENERATED);
+        JurassicBlocks.EGGS.forEach((id, eggBlock) -> generator.register(eggBlock.asItem(), Models.GENERATED));
 
         generator.register(JurassicItems.VLC_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));

@@ -2,7 +2,10 @@ package com.dinoproo.legendsawaken.block;
 
 import com.dinoproo.legendsawaken.LegendsAwaken;
 import com.dinoproo.legendsawaken.block.custom.GiantFernBlock;
-import com.dinoproo.legendsawaken.block.item.custom.GiantFernBlockItem;
+import com.dinoproo.legendsawaken.block.custom.HangingSignBlock;
+import com.dinoproo.legendsawaken.block.custom.SignBlock;
+import com.dinoproo.legendsawaken.block.custom.WallHangingSignBlock;
+import com.dinoproo.legendsawaken.block.custom.WallSignBlock;
 import com.dinoproo.legendsawaken.world.tree.ModSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -32,7 +35,7 @@ public class ModBlocks {
     public static final Block SEQUOIA_FENCE = registerBlock("sequoia_fence",
             new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
     public static final Block SEQUOIA_FENCE_GATE = registerBlock("sequoia_fence_gate",
-            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
+            new FenceGateBlock(ModWoodTypes.SEQUOIA, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
     public static final Block SEQUOIA_DOOR = registerBlock("sequoia_door",
             new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_DOOR)));
     public static final Block SEQUOIA_TRAPDOOR = registerBlock("sequoia_trapdoor",
@@ -41,6 +44,15 @@ public class ModBlocks {
             new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE)));
     public static final Block SEQUOIA_BUTTON = registerBlock("sequoia_button",
             new ButtonBlock(BlockSetType.OAK, 30, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)));
+
+    public static final Block SEQUOIA_SIGN = registerBlockWithNoItem("sequoia_sign",
+            new SignBlock(ModWoodTypes.SEQUOIA, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+    public static final Block SEQUOIA_WALL_SIGN = registerBlockWithNoItem("sequoia_wall_sign",
+            new WallSignBlock(ModWoodTypes.SEQUOIA, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)));
+    public static final Block SEQUOIA_HANGING_SIGN = registerBlockWithNoItem("sequoia_hanging_sign",
+            new HangingSignBlock(ModWoodTypes.SEQUOIA, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+    public static final Block SEQUOIA_WALL_HANGING_SIGN = registerBlockWithNoItem("sequoia_wall_hanging_sign",
+            new WallHangingSignBlock(ModWoodTypes.SEQUOIA, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
 
     public static final Block SEQUOIA_LEAVES = registerBlock("sequoia_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
@@ -69,13 +81,8 @@ public class ModBlocks {
     public static final Block STEEL_TRAPDOOR = registerBlock("steel_trapdoor",
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(STEEL_BLOCK)));
 
-    public static final Block GIANT_FERN = Registry.register(
-            Registries.BLOCK, Identifier.of(LegendsAwaken.MOD_ID, "giant_fern"),
+    public static final Block GIANT_FERN = registerBlockWithNoItem("giant_fern",
             new GiantFernBlock(AbstractBlock.Settings.copy(Blocks.LARGE_FERN))
-    );
-    public static final Item GIANT_FERN_ITEM = Registry.register(
-            Registries.ITEM, Identifier.of(LegendsAwaken.MOD_ID, "giant_fern"),
-            new GiantFernBlockItem(GIANT_FERN, new Item.Settings())
     );
 
 
@@ -85,6 +92,10 @@ public class ModBlocks {
 
     private static Block registerTransparentBlock(String name, float strength, BlockSoundGroup sound) {
         return registerBlock(name, new TransparentBlock(AbstractBlock.Settings.create().nonOpaque().strength(strength).requiresTool().sounds(sound)));
+    }
+
+    private static Block registerBlockWithNoItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, Identifier.of(LegendsAwaken.MOD_ID, name), block);
     }
 
     private static Block registerBlock(String name, Block block) {

@@ -30,6 +30,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SEQUOIA_FENCE);
                         entries.add(ModBlocks.SEQUOIA_FENCE_GATE);
 
+                        entries.add(ModItems.SEQUOIA_SIGN);
+                        entries.add(ModItems.SEQUOIA_HANGING_SIGN);
+
                         entries.add(ModBlocks.REINFORCED_GLASS);
 
                         entries.add(ModBlocks.CALCITE_STAIRS);
@@ -59,6 +62,8 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.SEQUOIA_LEAVES);
                         entries.add(ModBlocks.SEQUOIA_SAPLING);
+
+                        entries.add(ModItems.GIANT_FERN);
 
                         entries.add(JurassicBlocks.AMBER_ORE);
                         entries.add(JurassicBlocks.RICH_AMBER_ORE);
@@ -133,6 +138,7 @@ public class ModItemGroups {
                         entries.add(JurassicItems.HYBRID_DNA);
 
                         entries.add(JurassicItems.SYNTETIC_EGG);
+                        JurassicBlocks.EGGS.forEach(((id, eggBlock) -> entries.add(eggBlock)));
 
                         entries.add(JurassicItems.RAPTOR_LEG);
                         entries.add(JurassicItems.COOKED_RAPTOR_LEG);

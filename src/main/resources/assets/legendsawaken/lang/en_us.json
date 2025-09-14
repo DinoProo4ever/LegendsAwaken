@@ -46,6 +46,7 @@
   "tag.item.legendsawaken.polymer": "Polymer",
   "tag.item.legendsawaken.sequoia_logs": "Sequoia Logs",
   "tag.item.legendsawaken.amber": "Amber",
+  "tag.item.legendsawaken.dna": "DNA",
 
   "tooltip.legendsawaken.species": "Species: %s",
   "tooltip.legendsawaken.species.unknown": "???",
@@ -64,6 +65,8 @@
   "block.legendsawaken.sequoia_trapdoor": "Sequoia Trapdoor",
   "block.legendsawaken.sequoia_pressure_plate": "Sequoia Pressure Plate",
   "block.legendsawaken.sequoia_button": "Sequoia Button",
+  "block.legendsawaken.sequoia_sign": "Sequoia Sign",
+  "block.legendsawaken.sequoia_hanging_sign": "Sequoia Hanging Sign",
   "block.legendsawaken.sequoia_leaves": "Sequoia Leaves",
   "block.legendsawaken.sequoia_sapling": "Sequoia Sapling",
   "block.legendsawaken.reinforced_glass": "Reinforced Glass",
@@ -88,6 +91,7 @@
   "block.legendsawaken.low_security_fence": "Low Security Fence",
   "block.legendsawaken.fence_gate": "Fence Gate",
   "block.legendsawaken.velociraptor_egg": "Velociraptor Egg",
+  "block.legendsawaken.brachiosaurus_egg": "Brachiosaurus Egg",
   "block.legendsawaken.dna_extractor": "DNA Extractor",
   "block.legendsawaken.dna_enhancer": "DNA Enhancer",
   "block.legendsawaken.dna_hybridizer": "DNA Hybridizer",
@@ -109,5 +113,8 @@
   "entity.legendsawaken.brachiosaurus": "Brachiosaurus",
   "entity.legendsawaken.parasaurolophus": "Parasaurolophus",
   "entity.legendsawaken.tyrannosaurus": "Tyrannosaurus",
-  "entity.legendsawaken.indominus": "Indominus"
+  "entity.legendsawaken.indominus": "Indominus",
+
+  "category.legendsawaken": "Legends Awaken",
+  "key.legendsawaken.open_stats": "Open Stats Screen"
 }

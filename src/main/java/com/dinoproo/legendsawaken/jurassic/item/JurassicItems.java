@@ -38,7 +38,7 @@ public class    JurassicItems {
 
     //Spawn Eggs
     public static final Item VLC_SPAWN_EGG = registerSpawnEgg("velociraptor_spawn_egg", JurassicEntities.VELOCIRAPTOR, 0xaf9063, 0x806c47);
-    public static final Item BRC_SPAWN_EGG = registerSpawnEgg("brachiosaurus_spawn_egg", JurassicEntities.BRACHIOSAURUS, 0x8897365, 0x3b3934);
+    public static final Item BRC_SPAWN_EGG = registerSpawnEgg("brachiosaurus_spawn_egg", JurassicEntities.BRACHIOSAURUS, 0x897365, 0x3b3934);
 
 
 

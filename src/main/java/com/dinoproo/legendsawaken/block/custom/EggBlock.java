@@ -1,9 +1,9 @@
-package com.dinoproo.legendsawaken.jurassic.block.custom;
+package com.dinoproo.legendsawaken.block.custom;
 
-import com.dinoproo.legendsawaken.jurassic.entity.JurassicEntities;
-import com.dinoproo.legendsawaken.jurassic.entity.custom.VLCEntity;
+import com.dinoproo.legendsawaken.entity.custom.LegendsEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
@@ -22,22 +22,31 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
 import net.minecraft.world.event.GameEvent;
 
-public class VLCEggBlock extends Block {
-    public static final MapCodec<VLCEggBlock> CODEC = createCodec(VLCEggBlock::new);
+public class EggBlock extends Block {
+    public static final MapCodec<EggBlock> CODEC = createCodec(EggBlock::new);
     public static final int FINAL_HATCH_STAGE = 2;
     public static final IntProperty HATCH = Properties.HATCH;
+
     private static final int HATCHING_TIME = 48000;
     private static final int BOOSTED_HATCHING_TIME = 24000;
     private static final int MAX_RANDOM_CRACK_TIME_OFFSET = 600;
+
     private static final VoxelShape SHAPE = Block.createCuboidShape(5, 0, 5, 11, 8, 11);
 
+    private final EntityType<? extends LegendsEntity> entityType;
+
     @Override
-    public MapCodec<VLCEggBlock> getCodec() {
+    public MapCodec<EggBlock> getCodec() {
         return CODEC;
     }
 
-    public VLCEggBlock(Settings settings) {
+    public EggBlock(Settings settings) {
+        this(null, settings);
+    }
+
+    public EggBlock(EntityType<? extends LegendsEntity> entityType, Settings settings) {
         super(settings);
+        this.entityType = entityType;
         this.setDefaultState(this.stateManager.getDefaultState().with(HATCH, 0));
     }
 
@@ -56,23 +65,26 @@ public class VLCEggBlock extends Block {
     }
 
     private boolean isReadyToHatch(BlockState state) {
-        return this.getHatchStage(state) == 2;
+        return this.getHatchStage(state) == FINAL_HATCH_STAGE;
     }
 
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!this.isReadyToHatch(state)) {
-            world.playSound(null, pos, SoundEvents.BLOCK_SNIFFER_EGG_CRACK, SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
+            world.playSound(null, pos, SoundEvents.BLOCK_SNIFFER_EGG_CRACK,
+                    SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
             world.setBlockState(pos, state.with(HATCH, this.getHatchStage(state) + 1), Block.NOTIFY_LISTENERS);
         } else {
-            world.playSound(null, pos, SoundEvents.BLOCK_SNIFFER_EGG_HATCH, SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
+            world.playSound(null, pos, SoundEvents.BLOCK_SNIFFER_EGG_HATCH,
+                    SoundCategory.BLOCKS, 0.7F, 0.9F + random.nextFloat() * 0.2F);
             world.breakBlock(pos, false);
-            VLCEntity vlcEntity = JurassicEntities.VELOCIRAPTOR.create(world);
-            if (vlcEntity != null) {
+
+            LegendsEntity entity = this.entityType.create(world);
+            if (entity != null) {
                 Vec3d vec3d = pos.toCenterPos();
-                vlcEntity.setBaby(true);
-                vlcEntity.refreshPositionAndAngles(vec3d.getX(), vec3d.getY(), vec3d.getZ(), MathHelper.wrapDegrees(world.random.nextFloat() * 360.0F), 0.0F);
-                world.spawnEntity(vlcEntity);
+                entity.setBaby(true);
+                entity.refreshPositionAndAngles(vec3d.getX(), vec3d.getY(), vec3d.getZ(), MathHelper.wrapDegrees(world.random.nextFloat() * 360.0F), 0.0F);
+                world.spawnEntity(entity);
             }
         }
     }
@@ -84,10 +96,10 @@ public class VLCEggBlock extends Block {
             world.syncWorldEvent(WorldEvents.SNIFFER_EGG_CRACKS, pos, 0);
         }
 
-        int i = bl ? 12000 : 24000;
+        int i = bl ? BOOSTED_HATCHING_TIME : HATCHING_TIME;
         int j = i / 3;
         world.emitGameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Emitter.of(state));
-        world.scheduleBlockTick(pos, this, j + world.random.nextInt(600));
+        world.scheduleBlockTick(pos, this, j + world.random.nextInt(MAX_RANDOM_CRACK_TIME_OFFSET));
     }
 
     @Override

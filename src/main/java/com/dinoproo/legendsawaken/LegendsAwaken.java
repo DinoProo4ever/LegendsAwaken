@@ -83,6 +83,7 @@ public class LegendsAwaken implements ModInitializer {
 
 		JurassicItems.registerJurassicItems();
 		JurassicBlocks.registerJurassicBlocks();
+		JurassicBlocks.registerEggs();
 		JurassicSounds.registerJurassicSounds();
 
 		JurassicSpecies.registerJurassicSpecies();

@@ -1,12 +1,13 @@
 {
-	"required": true,
-	"package": "com.dinoproo.legendsawaken.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"LegendsAwakenMixin",
-		"CraftingResultSlotMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "com.dinoproo.legendsawaken.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CraftingResultSlotMixin",
+    "LegendsAwakenMixin",
+    "WoodTypeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }
